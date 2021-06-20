@@ -1,7 +1,7 @@
 def call(Map config = [:]){
     pipeline {
 	    environment {
-		    registry="${config.repo}:${config.tag}"
+		    registry="${config.repo}"
 		    registryCredential="Honey_Docker"
 		    dockerImage=""
 	  	  }
