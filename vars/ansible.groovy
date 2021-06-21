@@ -7,12 +7,6 @@ def call(Map config = [:]){
 		    ansiblePlaybook credentialsId: "AWS-SSH-KEY", disableHostKeyChecking: true, installation: "Ansible", inventory: "${config.apachehost}", playbook: "${config.apachefile}"
                 }
             }
-
-	stage ("shared pipeline for deploying tomcat to it's respective server") {
-            steps {
-               	    ansiblePlaybook credentialsId: "TOMCAT-KEY", disableHostKeyChecking: true, installation: "Ansible", inventory: "${config.tomcathost}", playbook: "${config.tomcatfile}"
-              }
-        }
+      	}
     }
-}
 }
