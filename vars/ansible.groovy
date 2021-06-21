@@ -12,7 +12,7 @@ def call(Map config = [:]){
             steps {
                	    ansiblePlaybook credentialsId: "AWS-SSH-KEY", disableHostKeyChecking: true, installation: "Ansible", inventory: "${config.tomcathost}", playbook: "${config.tomcatfile}"
               }
-        }    
         }
     }
+}
 }
